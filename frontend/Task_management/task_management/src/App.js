@@ -1,64 +1,56 @@
 // App.js
-import React, { useState } from "react";
-import axios from "axios";
+import React, {useState}  from "react";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-function App() {
-  const [signupData, setSignupData] = useState({ username: "", password: "" });
-  const [loginData, setLoginData] = useState({ username: "", password: "" });
+import LoginForm from "./components/Login/login";
+import RegisterForm from "./components/Register/register";
+import Dashboard from "./components/Mainpage/pages/dashboard";
+import Sidebar from "./components/Mainpage/sidebar";
+import Project from "./components/Mainpage/pages/project";
+import Tasks from "./components/Mainpage/pages/task";
+import Report from "./components/Mainpage/pages/report";
+import Users from "./components/Mainpage/pages/users";
+import About from "./components/Mainpage/pages/about";
+import Header from "./components/Mainpage/header";
 
-  const handleSignup = async () => {
-    try {
-      const response = await axios.post("http://localhost:8080/api/signup", signupData);
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error during signup:", error);
-    }
-  };
 
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post("http://localhost:8080/api/login", loginData);
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error during login:", error);
-    }
-  };
+const App = () => {
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   return (
     <div>
-      <h1>React, Golang Gin, and Cassandra Example</h1>
-
-      <div>
-        <h2>Signup</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          onChange={(e) => setSignupData({ ...signupData, username: e.target.value })}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setSignupData({ ...signupData, password: e.target.value })}
-        />
-        <button onClick={handleSignup}>Signup</button>
-      </div>
-
-      <div>
-        <h2>Login</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          onChange={(e) => setLoginData({ ...loginData, username: e.target.value })}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
-        />
-        <button onClick={handleLogin}>Login</button>
-      </div>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route
+            path="/"
+            element={isLoggedIn ? <Dashboard /> : <LoginForm onLogin={() => setLoggedIn(true)} />}
+          />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route
+            path="/task_management/*"
+            element={
+            <React.Fragment>
+              <Sidebar >
+              <Routes>
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/project" element={<Project />} />
+                <Route path="/tasks" element={<Tasks />} />
+                <Route path="/report" element={<Report />} />
+                <Route path="/users" element={<Users />} />
+                <Route path="/about" element={<About />} />
+              </Routes>
+              </Sidebar>
+             </React.Fragment>
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
+
+ 
 
 export default App;

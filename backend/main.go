@@ -68,9 +68,30 @@ func main() {
 		user.ID = gocql.TimeUUID()
 		user.Password = string(hashedPassword)
 
+		if session.Closed() {
+			log.Println("Cassandra session is closed. Reconnecting...")
+			// Reconnect or handle closed session (example: create a new session)
+			var err error
+			cluster := gocql.NewCluster("127.0.0.1")
+			cluster.Keyspace = "example_keyspace"
+
+			session, err = cluster.CreateSession()
+			if err != nil {
+				log.Fatal(err)
+			}
+			defer session.Close()
+			if err != nil {
+				log.Println("Error reconnecting to Cassandra:", err)
+				c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
+				return
+			}
+			defer session.Close()
+		}
+
 		if err := session.Query(`
 			INSERT INTO users (id, username, password) VALUES (?, ?, ?)`,
 			user.ID, user.Username, user.Password).Exec(); err != nil {
+			log.Println("Error inserting user:", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
 			return
 		}
@@ -87,16 +108,30 @@ func main() {
 
 		var storedPassword string
 		var storedID gocql.UUID
+		if session.Closed() {
+			log.Println("Cassandra session is closed. Reconnecting...")
+			// Reconnect or handle closed session (example: create a new session)
+			var err error
+			cluster := gocql.NewCluster("127.0.0.1")
+			cluster.Keyspace = "example_keyspace"
 
+			session, err = cluster.CreateSession()
+			if err != nil {
+				log.Fatal(err)
+			}
+			defer session.Close()
+		}
 		if err := session.Query(`
-			SELECT id, password FROM users WHERE username = ? LIMIT 1`,
+			SELECT id, password FROM users WHERE username = ? LIMIT 1 ALLOW FILTERING;`,
 			loginData.Username).Consistency(gocql.One).Scan(&storedID, &storedPassword); err != nil {
+			log.Println("Error during login:", err)
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid credentials"})
 			return
 		}
 
 		err := bcrypt.CompareHashAndPassword([]byte(storedPassword), []byte(loginData.Password))
 		if err != nil {
+			log.Println("Error during compare:", err)
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid credentials"})
 			return
 		}

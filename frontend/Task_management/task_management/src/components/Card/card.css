@@ -1,0 +1,25 @@
+.card {
+    width: 500px;
+    background-color: #000;
+    height: 500px;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+     
+  }
+  
+  @media only screen and (max-width: 620px) {
+    .card {
+      width: 60vw;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+  
+  @media only screen and (max-height: 670px) {
+    .card {
+      height: 550px;
+    }
+  }
+  
