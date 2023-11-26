@@ -3,7 +3,14 @@ gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 
 go.sum database tree
+<<<<<<< HEAD
 20775468
 rDsamow3Qr58pOM6ps3nl9PdME7uOqPNM1q9GhcipjY=
 
 — sum.golang.org Az3grp+0BIjtD4cbgRmKvOqZ2WBle60CvUpTtmWVVLl6ox85ren3GetdxmAVUHMjoYX63GJPaUNocnOwb0ue7rsY5wM=
+=======
+20730689
+Me0g2G0pYFGcqum3RC3EJo4nfDOhhtnkG08z9uCGPcI=
+
+— sum.golang.org Az3grkmJ3I8nFgnTbCM/QTL+gZPzCuUmIv7N4Z6nH7Ap5j41lHZAwaQr4XKGes1nc6NGxWIR1lKcM0jcqXgll4aC6wE=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

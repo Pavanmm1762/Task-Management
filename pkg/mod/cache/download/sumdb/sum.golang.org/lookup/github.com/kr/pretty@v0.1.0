@@ -3,7 +3,14 @@ github.com/kr/pretty v0.1.0 h1:L/CwN0zerZDmRFUapSPitk6f+Q3+0za1rQkzVuMiMFI=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 
 go.sum database tree
+<<<<<<< HEAD
 20776125
 TxOQf5+PLITKYn+Hy6G0ynjGQMZhtStpW1hKEszepGQ=
 
 — sum.golang.org Az3grq/T2CI8IALvnu7kIXW+GepX5r9MfwuXYheBBOdW//vIAuifRiqDXlf2pcuJz/ifJoiWExQplxU4z0Kqm+ShCwQ=
+=======
+20732018
+6xQqYs4U2Abu80NLcoGv88Zj7puel+2tDp4fgOfYTMk=
+
+— sum.golang.org Az3grmrnGtjORz+yuYev38kSq29TmV2Lf2Ix/kJXal8kCUNKrT7zKp1b0cLpSLyWVXvxElRMhmTaLC7lixDqWH3K5gw=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

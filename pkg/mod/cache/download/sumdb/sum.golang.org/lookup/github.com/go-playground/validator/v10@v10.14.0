@@ -3,7 +3,14 @@ github.com/go-playground/validator/v10 v10.14.0 h1:vgvQWe3XCz3gIeFDm/HnTIbj6UGmg
 github.com/go-playground/validator/v10 v10.14.0/go.mod h1:9iXMNT7sEkjXb0I+enO7QXmzG6QCsPWY4zveKFVRSyU=
 
 go.sum database tree
+<<<<<<< HEAD
 20776673
 ZOU5U/e3hQ4EGUJKGnkQ5it26nDcB2qHXr8fRN5Rlpo=
 
 — sum.golang.org Az3grnboiesPd62vrgHg4s/rlkMxoZ2CgpmenvDGQTLHK6OtaSRIckp/wR4x0eO+VFldL8kdNRF6oINYYNBOhhTqrAs=
+=======
+20732234
+ghvni+nEUo+fLe6bo+1ogupawSfG/kbxPWoKSgMSM1s=
+
+— sum.golang.org Az3gru04c1qAiathmTkRbh9FpSULAOrKjllnUCTEY0+U06N5vLH07TdeeZwifbOh/qZ6kRfGxSAyhsA5EPCK5oripQY=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

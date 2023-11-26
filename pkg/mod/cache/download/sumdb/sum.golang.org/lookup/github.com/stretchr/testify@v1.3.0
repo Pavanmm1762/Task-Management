@@ -3,7 +3,14 @@ github.com/stretchr/testify v1.3.0 h1:TivCn/peBQ7UY8ooIcPgZFpTNSz0Q2U6UrFlUfqbe0
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 
 go.sum database tree
+<<<<<<< HEAD
 20775665
 41IQbY+FXfBth+b04kgUXhqD8Fe3eUusmix2qHxV9N8=
 
 — sum.golang.org Az3grhWjiTnHWDZkvxhMfNYLCFePrYJhXf6BDK1udII6XkIkvzObXPinvGVf7lDPwMKB4gqGisfh7LLxzewLF7c2+AI=
+=======
+20730626
+KM/I8Eo9QVK4LuXuD+1ym6QoSyQplCIeyQk6Qg2A4j0=
+
+— sum.golang.org Az3grq4jx9RVx/zjOtKMaSy76n/zmjN5FiRY2PWKA411lhVYglZvjZPgIxCSjEtaPqj3tTAY2ZFtRWf2aZ23dnx82QA=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

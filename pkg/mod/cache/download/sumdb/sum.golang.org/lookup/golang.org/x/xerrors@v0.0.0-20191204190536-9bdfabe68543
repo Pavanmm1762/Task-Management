@@ -3,7 +3,14 @@ golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 h1:E7g+9GITq07hpfrRu66IV
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 
 go.sum database tree
+<<<<<<< HEAD
 20775965
 C+/rNxCzG0F4SBz32Uk+cMGqcV9j7GSuiNRpaMuGHD0=
 
 — sum.golang.org Az3grlIIaF52GGcQIb/pSeqOXo+f+aedEnX1Wv+Xxy5eRVK9q9y4odzvwskW9rqA+pYd89sKPU+Z+gt5q2+dlpR7ig0=
+=======
+20731861
+VONbl8qerJ6diRa3Sa4EarJQQbWhP11sMS3WKrYP6i8=
+
+— sum.golang.org Az3grskFo8OWREd95qQMii4KJPT9cfPv4P5VzASefXb3TOJHEeBKoVSpuAKU7FR08rg+vHCoaobncsQN08sPHGhw6w0=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

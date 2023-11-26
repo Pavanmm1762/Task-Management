@@ -3,7 +3,14 @@ github.com/gocql/gocql v1.6.0 h1:IdFdOTbnpbd0pDhl4REKQDM+Q0SzKXQ1Yh+YZZ8T/qU=
 github.com/gocql/gocql v1.6.0/go.mod h1:3gM2c4D3AnkISwBxGnMMsS8Oy4y2lhbPRsH4xnJrHG8=
 
 go.sum database tree
+<<<<<<< HEAD
 20776835
 BF8e6oPjy3UALqo0s0Xijgowm4V1bwGjCwF0B/i/hco=
 
 — sum.golang.org Az3grpvZbHTlf156xjQp5KrWYeZDVfMJLmLpVohPSAQPXcaK2UBWAuXS/y9ZB1bQm4b++9CcP3UnFb+NEKtNw1dbdw4=
+=======
+20732210
+ODMxYIjrZFyz0c3+gWW/uqAxl3rJ+uGnrZUg2A2WVg0=
+
+— sum.golang.org Az3grpbRpMmaslID9uYwruxztLzWxndZPrNSanitcd/kAf8OrYYEomJ9RWwS2xXFPIDxMK56FDxIUwyWg+2BDUHqTgs=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

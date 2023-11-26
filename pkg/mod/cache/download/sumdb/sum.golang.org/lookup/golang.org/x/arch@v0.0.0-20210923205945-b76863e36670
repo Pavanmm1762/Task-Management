@@ -3,7 +3,14 @@ golang.org/x/arch v0.0.0-20210923205945-b76863e36670 h1:18EFjUmQOcUvxNYSkA6jO9VA
 golang.org/x/arch v0.0.0-20210923205945-b76863e36670/go.mod h1:5om86z9Hs0C8fWVUuoMHwpExlXzs5Tkyp9hOrfG7pp8=
 
 go.sum database tree
+<<<<<<< HEAD
 20775974
 A0OeRCppj84D3ADJ9lz92aMp4SA4jRfCJ8F/enn59H8=
 
 — sum.golang.org Az3grnaQVc7GKwaNDlScHvzy0B2s5oNU4jdR5lfKAsnZUVKboUcnMgwFOwiz3t4XMIcLZ4ugS2VUaK0r/lHhgtyRdQA=
+=======
+20732221
+KRu0cnSUSmU0Z0miywZvMdZqJth63z1280LivpvVPII=
+
+— sum.golang.org Az3grudAFfYq9Xiq1LxA3YmjUiVrtnECIvaoKGwlrZr7D0Q/K4Fi1VT1QwTSTAd253kqsGP9IVL+x802t9efS4ojZAI=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import Card from "../../components/Card/card";
-import GoogleIcon from "@mui/icons-material/Google";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';

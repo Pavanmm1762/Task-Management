@@ -3,7 +3,14 @@ github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 h1:DDGfHa7BWjL4Yn
 github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869/go.mod h1:Ekp36dRnpXw/yCqJaO+ZrUyxD+3VXMFFr56k5XYrpB4=
 
 go.sum database tree
+<<<<<<< HEAD
 20775295
 B6tCP70m5CLImGdRArmLjJgwaJmq/oLPmm5DlEQ0VO0=
 
 — sum.golang.org Az3grqen2wdeacWOoPMo3kd1HkhYo5ZYmIT4lH1cHJyM/3kaIa3ApjkN37CT3EOBuJunrgY6PMcrlI0XyZ1+jSEVDQY=
+=======
+20730757
+agHKE3nnaTIX8Pj3auVr2mSsYas6dqgW5qv5kbRxHOc=
+
+— sum.golang.org Az3grjfQ549+xQ6bfjBZ4stiwvwbF03QVGDtcrVvMUx1Tk7OuKScRsT7coH4EiCYpqk/yXG9/kmXgNZHZwnNsOlldAM=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37

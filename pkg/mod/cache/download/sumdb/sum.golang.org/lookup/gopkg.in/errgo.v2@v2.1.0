@@ -3,7 +3,14 @@ gopkg.in/errgo.v2 v2.1.0 h1:0vLT13EuvQ0hNvakwLuFZ/jYrLp5F3kcWHXdRggjCE8=
 gopkg.in/errgo.v2 v2.1.0/go.mod h1:hNsd1EY+bozCKY1Ytp96fpM3vjJbqLJn88ws8XvfDNI=
 
 go.sum database tree
+<<<<<<< HEAD
 20775873
 Z1YdwUn6drSIgpg4QvsSNdH7McChVkoUnoazrgQvpcY=
 
 — sum.golang.org Az3grtYooYjJ0PXbL6+9nDsu3YFG7u1Ai81QHX/tWVBLTXWmm+rnb0hfiQmNWPLq7I7c1WfAFAxIXT9x/cJgW1wWFQI=
+=======
+20730815
+InsACwEHfJvLzJJRmL8i8VcumGOszHSpmxcgCZaLJ3E=
+
+— sum.golang.org Az3grgAZdYuLyHMFf85O3y8ZHtdTAlIon+byifrgt0JUcN3Qw1o/qJqp+iiTwQPOW6i1mVR4KQUf3aUNY5ezoRY/ZgI=
+>>>>>>> 797c581cb2b7dfabfc45065db9b7ac3a7153db37
