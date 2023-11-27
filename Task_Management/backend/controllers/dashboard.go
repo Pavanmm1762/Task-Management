@@ -28,12 +28,12 @@ func getDashboard(c *gin.Context) {
 		return
 	}
 
-	iter := utils.Session.Query("SELECT count(id),count(status) FROM projects where owner_id = ? and status = 'completed' ALLOW FILTERING",
+	iter := utils.Session.Query("SELECT count(id) FROM projects where owner_id = ? ",
 		userID).Iter()
 
 	var totalProjects, completedProjects int
 
-	if !iter.Scan(&totalProjects, &completedProjects) {
+	if !iter.Scan(&totalProjects) {
 		if err := iter.Close(); err != nil {
 			c.JSON(500, gin.H{"error": err.Error()})
 			return
@@ -41,9 +41,23 @@ func getDashboard(c *gin.Context) {
 
 	}
 	dashboard.TotalProjects = totalProjects
-	dashboard.CompletedProjects = completedProjects
-	fmt.Printf("Total Projects: %v, %v\n", totalProjects, completedProjects)
+	fmt.Printf("Total Projects: %v\n", totalProjects)
 	iter.Close()
+
+	iter1 := utils.Session.Query("SELECT count(status) FROM projects where owner_id = ? and status = 'completed' ALLOW FILTERING ",
+		userID).Iter()
+
+	if !iter.Scan(&completedProjects) {
+		if err := iter.Close(); err != nil {
+			c.JSON(500, gin.H{"error": err.Error()})
+			return
+		}
+
+	}
+	dashboard.CompletedProjects = completedProjects
+	fmt.Printf("Completed Projects: %v\n", completedProjects)
+	iter1.Close()
+
 	// Fetch tasks for each project
 	userIter := utils.Session.Query(`
 			SELECT count(user_id)

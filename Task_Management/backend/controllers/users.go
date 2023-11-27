@@ -47,7 +47,15 @@ func addUser(c *gin.Context) {
 // GetProjects gets all projects
 func getUsers(c *gin.Context) {
 	var users []utils.Users
-	iter := utils.Session.Query("SELECT user_id, first_name, last_name, user_role, user_email  FROM users").Iter()
+	tokenString1 := c.GetHeader("Authorization")
+
+	admin_id, err := getAdminId(tokenString1)
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User ID not found in context"})
+		return
+	}
+
+	iter := utils.Session.Query("SELECT user_id, first_name, last_name, user_role, user_email  FROM users where admin_id = ?", admin_id).Iter()
 	for {
 		var user utils.Users
 
